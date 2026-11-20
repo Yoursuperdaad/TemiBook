@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TemiTope • Hospital Appointment System</title>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ======================================== -->
+    <!-- SECTION 1: NAVIGATION + TOP BAR          -->
+    <!-- ======================================== -->
+    <header>
+        <!-- Top Bar (Emergency & Hours) -->
+        <div class="top-bar" data-aos="fade-down">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</span>
+                    <span><i class="fas fa-clock"></i> Mon–Sat: 8:00 AM – 8:00 PM</span>
+                </div>
+                <div class="emergency-badge">
+                    <i class="fas fa-ambulance"></i> Emergency: 911
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav id="navbar" data-aos="fade-down" data-aos-delay="100">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i> Temi<span>Tope</span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="#booking" class="nav-link">Book Now</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+                <!-- Dark Mode Toggle -->
+                <div class="nav-actions">
+                    <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================================== -->
+    <!-- SECTION 2: HERO / BANNER                 -->
+    <!-- ======================================== -->
+    <section id="hero" data-aos="fade-up">
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-delay="200">
+                <span class="badge">✦ Trusted Since 2015</span>
+                <h1>Book Your <span class="highlight">Doctor's Appointment</span> in Minutes</h1>
+                <p class="hero-desc">
+                    TemiBook connects you with top-rated specialists. No waiting lines, 
+                    instant confirmation, and secure records—all from your phone or computer.
+                </p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Happy Patients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfaction Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Expert Doctors</span>
+                    </div>
+                </div>
+                <a href="#booking" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Book Appointment
+                </a>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+                <img src="A high-resolution, professional, and warmly lit portrait of a confident.jfif" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- SECTION 3: SERVICES / FEATURES           -->
+    <!-- ======================================== -->
+    <section id="services" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Our Services</span>
+                <h2>Comprehensive Healthcare <br />Under One Roof</h2>
+                <p>From routine check-ups to specialized surgeries, we've got you covered.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="flip-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>General Medicine</h3>
+                    <p>Annual physicals, vaccinations, and treatment for common illnesses like flu and infections.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Cardiology</h3>
+                    <p>Heart health evaluations, ECG, stress testing, and management of chronic heart conditions.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Neurology</h3>
+                    <p>Diagnosis and treatment for migraines, epilepsy, stroke, and other nervous system disorders.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-baby"></i></div>
+                    <h3>Pediatrics</h3>
+                    <p>Childhood immunizations, growth monitoring, and developmental screenings for ages 0–18.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="500">
+                    <div class="service-icon"><i class="fas fa-bone"></i></div>
+                    <h3>Orthopedics</h3>
+                    <p>Fracture care, joint replacements, sports injury rehabilitation, and physical therapy.</p>
+                </div>
+                <div class="service-card" data-aos="flip-up" data-aos-delay="600">
+                    <div class="service-icon"><i class="fas fa-lungs"></i></div>
+                    <h3>Pulmonology</h3>
+                    <p>Asthma management, COPD treatment, sleep apnea studies, and lung function testing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- SECTION 4: DOCTORS / TEAM                -->
+    <!-- ======================================== -->
+    <section id="doctors" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Meet Our Team</span>
+                <h2>Experienced & Compassionate <br />Medical Professionals</h2>
+                <p>Each doctor is board-certified and brings years of real-world experience.</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="doctor-img" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. Sarah Mitchell</h3>
+                    <span class="specialty">Cardiologist</span>
+                    <p>15 years experience • Harvard Medical School</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span>(4.8/5)</span>
+                    </div>
+                    <button class="btn btn-small" onclick="selectDoctor('Dr. Sarah Mitchell')">
+                        <i class="fas fa-calendar-plus"></i> Book
+                    </button>
+                </div>
+                <div class="doctor-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="doctor-img" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. James Okafor</h3>
+                    <span class="specialty">Neurologist</span>
+                    <p>10 years experience • Johns Hopkins</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(5.0/5)</span>
+                    </div>
+                    <button class="btn btn-small" onclick="selectDoctor('Dr. James Okafor')">
+                        <i class="fas fa-calendar-plus"></i> Book
+                    </button>
+                </div>
+                <div class="doctor-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="doctor-img" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. Amara Chen</h3>
+                    <span class="specialty">Pediatrician</span>
+                    <p>8 years experience • Stanford Children's</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(4.9/5)</span>
+                    </div>
+                    <button class="btn btn-small" onclick="selectDoctor('Dr. Amara Chen')">
+                        <i class="fas fa-calendar-plus"></i> Book
+                    </button>
+                </div>
+                <div class="doctor-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="doctor-img" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. Michael Reyes</h3>
+                    <span class="specialty">Orthopedic Surgeon</span>
+                    <p>12 years experience • Mayo Clinic</p>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span>(4.7/5)</span>
+                    </div>
+                    <button class="btn btn-small" onclick="selectDoctor('Dr. Michael Reyes')">
+                        <i class="fas fa-calendar-plus"></i> Book
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- SECTION 5: BOOKING FORM                  -->
+    <!-- ======================================== -->
+    <section id="booking" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Book Your Visit</span>
+                <h2>Schedule an Appointment <br />in 3 Simple Steps</h2>
+                <p>Fill out the form below and we'll confirm your slot within 1 hour.</p>
+            </div>
+            <div class="booking-wrapper">
+                <!-- Step indicators -->
+                <div class="booking-steps" data-aos="fade-right">
+                    <div class="step active">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Choose Doctor</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Pick Date & Time</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Confirm Details</span>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="bookingForm" class="booking-form" data-aos="fade-left" data-aos-delay="200">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName"><i class="fas fa-user"></i> Full Name *</label>
+                            <input type="text" id="fullName" placeholder="e.g., John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress"><i class="fas fa-envelope"></i> Email *</label>
+                            <input type="email" id="emailAddress" placeholder="john@example.com" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number *</label>
+                            <input type="tel" id="phoneNumber" placeholder="+1 (555) 000-0000" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="doctorSelect"><i class="fas fa-user-md"></i> Select Doctor *</label>
+                            <select id="doctorSelect" required>
+                                <option value="">— Select a Doctor —</option>
+                                <option value="Dr. Sarah Mitchell">Dr. Sarah Mitchell (Cardiology)</option>
+                                <option value="Dr. James Okafor">Dr. James Okafor (Neurology)</option>
+                                <option value="Dr. Amara Chen">Dr. Amara Chen (Pediatrics)</option>
+                                <option value="Dr. Michael Reyes">Dr. Michael Reyes (Orthopedics)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="appointmentDate"><i class="fas fa-calendar-day"></i> Preferred Date *</label>
+                            <input type="date" id="appointmentDate" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentTime"><i class="fas fa-clock"></i> Preferred Time *</label>
+                            <select id="appointmentTime" required>
+                                <option value="">— Select Time —</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="symptoms"><i class="fas fa-notes-medical"></i> Brief Description of Symptoms</label>
+                        <textarea id="symptoms" rows="3" placeholder="e.g., Chest pain, shortness of breath, fatigue..."></textarea>
+                    </div>
+
+                    <div class="form-group full-width checkbox-group">
+                        <input type="checkbox" id="termsCheck" required />
+                        <label for="termsCheck">I agree to the <a href="#" onclick="event.preventDefault()">Terms & Conditions</a> and confirm my details are accurate.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-check-circle"></i> Confirm Appointment
+                    </button>
+
+                    <!-- Live counter (JavaScript will update this) -->
+                    <div class="appointment-counter" id="appointmentCounter">
+                        <i class="fas fa-users"></i> <span id="counterNumber">0</span> appointments booked today
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- SECTION 6: TESTIMONIALS / REVIEWS        -->
+    <!-- ======================================== -->
+    <section id="testimonials" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Patient Stories</span>
+                <h2>What Our Patients <br />Say About Us</h2>
+                <p>Real reviews from real people who found relief and care at TemiTope.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="testimonial-header">
+                        <div class="avatar" style="background: #667eea;">JD</div>
+                        <div>
+                            <h4>John Doe</h4>
+                            <span>Cardiology Patient</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Dr. Mitchell saved my life. I came in with severe chest pain and within 30 minutes I had an ECG, diagnosis, and treatment plan. The booking process was seamless!"</p>
+                    <span class="testimonial-date">2 weeks ago</span>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-header">
+                        <div class="avatar" style="background: #f5576c;">MA</div>
+                        <div>
+                            <h4>Mary Adeyemi</h4>
+                            <span>Pediatrics Patient (Mother)</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"My daughter was terrified of doctors, but Dr. Chen made her feel so comfortable. The online booking saved me from waiting hours at the clinic. Highly recommend!"</p>
+                    <span class="testimonial-date">1 month ago</span>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-left" data-aos-delay="300">
+                    <div class="testimonial-header">
+                        <div class="avatar" style="background: #4facfe;">RO</div>
+                        <div>
+                            <h4>Robert Okafor</h4>
+                            <span>Orthopedic Surgery Patient</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"Dr. Reyes performed my knee replacement. I was walking without pain in 4 weeks. The staff at TemiTope were professional, kind, and incredibly supportive."</p>
+                    <span class="testimonial-date">3 months ago</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- SECTION 7: FAQ / ACCORDION               -->
+    <!-- ======================================== -->
+    <section id="faq" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Frequently Asked Questions</span>
+                <h2>Got Questions? <br />We've Got Answers.</h2>
+                <p>Everything you need to know before your first visit.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>How do I book an appointment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simply visit our <a href="#booking">Booking Section</a>, select your preferred doctor, choose a date and time, and fill in your details. You'll receive a confirmation email within 1 hour.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-left" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>Do I need a referral?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For general medicine and pediatrics, no referral is needed. For cardiology, neurology, and orthopedics, we recommend bringing any previous medical records or referral letters.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="300">
+                    <button class="faq-question">
+                        <span>What insurance do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major insurance providers including Aetna, Blue Cross, Cigna, UnitedHealthcare, and Medicare. Contact our front desk for specific coverage questions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-left" data-aos-delay="400">
+                    <button class="faq-question">
+                        <span>Can I cancel or reschedule?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! You can cancel or reschedule up to 24 hours before your appointment without any penalty. Simply call our reception or reply to your confirmation email.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="500">
+                    <button class="faq-question">
+                        <span>Is telemedicine available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We offer virtual consultations for follow-ups, prescription refills, and minor ailments. Select "Telemedicine" when booking your appointment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- SECTION 8: FOOTER                        -->
+    <!-- ======================================== -->
+    <footer data-aos="fade-up">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i> Temi<span>Book</span>
+                    </div>
+                    <p>Your trusted partner in healthcare. We make booking appointments simple, fast, and stress-free.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#booking">Book Appointment</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Health Ave, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> temitope@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Healthy</h4>
+                    <p>Subscribe for health tips & updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email" />
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </footer>
+
+    <!-- ======================================== -->
+    <!-- SCRIPTS                                  -->
+    <!-- ======================================== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
